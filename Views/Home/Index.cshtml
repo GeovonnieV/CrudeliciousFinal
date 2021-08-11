@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to CRUDelicious</h1>
+    <h3>Check out some recent dishes!</h3>
+    @{
+        @foreach (var dish in ViewBag.AllDishes)
+        {
+            @* when user clicks on name it goes to the controller and loads it with the selected dishes ID *@
+            <a href="/@dish.DishId">@dish.Name </a> <p> by @dish.Chef</p> 
+            
+        }
+    }
+
+   <button><a href="New">Add a dish</a></button> 
+
+</body>
+
+</html>
